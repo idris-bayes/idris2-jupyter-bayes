@@ -8,7 +8,7 @@ jupyter nbextension install --user --py vega
 pip3 install vega==3.5
 ```
 
-2) Make sure to have the following in your global `pack.toml` file (generally found under `~/.pack/user/pack.toml`:
+2) Make sure to have the following in your global `pack.toml` file (generally found under `~/.pack/user/pack.toml`):
 ```
 [custom.all.json-schema]
 type   = "github"
@@ -22,3 +22,7 @@ ipkg   = "json-schema.ipkg"
 cd run
 ./jupyter_run.sh
 ```
+
+4) In the browser, go to the jupyter notebook and select `idris2`.
+
+5) The dependencies of the notebook are given in `dummy.ipkg`, an `.ipkg` file which will be read by Idris when invoked by the jupyter kernel. This file must list all necessary dependencies, including the one to `vegatest`, otherwise we won't be able to run `:module VegaTest`. 
