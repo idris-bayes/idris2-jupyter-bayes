@@ -27,3 +27,9 @@ ipkg   = "idris2-jupyter-vega.ipkg"
 type = "local"
 path = "vegatest"
 ipkg = "vegatest.ipkg"
+
+[custom.all.prob-fx]
+type   = "github"
+url    = "https://github.com/idris-bayes/prob-fx"
+commit = "latest:main"
+ipkg   = "prob-fx.ipkg"
