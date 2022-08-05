@@ -13,7 +13,7 @@ package bayes
 -- langversion
 
 -- packages to add to search path
-depends = prob-fx, monad-bayes, log-domain, distribution, free, contrib, python, jupyter, idris2-jupyter-vega, tailrec
+depends = monad-bayes, log-domain, distribution, free, contrib, python, jupyter, idris2-jupyter-vega, tailrec
 
 -- modules to install
 modules = LinRegr

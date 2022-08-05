@@ -76,19 +76,20 @@ export
 scatterGraph : List (Double, Double) -> VegaLite
 scatterGraph vals = TopLevelSpec_0 $ MkTopLevelUnitSpec
     {Schema = Just "https://vega.github.io/schema/vega-lite/v5.json"}
-    (Data_0 $ Data_0 $ DataSource_1 $ MkInlineData $ InlineDataset_3 $ map (\(x, y) => JObject [("a", JNumber x), ("b", JNumber y)]) vals)
+    (Data_0 $ Data_0 $ DataSource_1 $ MkInlineData $ InlineDataset_3 $ map (\(x, y) => JObject [("x", JNumber x), ("y", JNumber y)]) vals)
     {description = Just "A scatterplot"}
     {encoding = Just $ MkFacetedEncoding
         {x = Just $ PositionDef_0 $ MkPositionFieldDef
-            {field = Just $ Field_0 "a"}
+            {field = Just $ Field_0 "x"}
             {type = Just StandardTypeQuantitative}
         }
         {y = Just $ PositionDef_0 $ MkPositionFieldDef
-            {field = Just $ Field_0 "b"}
+            {field = Just $ Field_0 "y"}
             {type = Just StandardTypeQuantitative}
         }
     }
-    (AnyMark_2 MarkBar)
+    {mark = AnyMark_2 MarkPoint}
+    -- (AnyMark_2 MarkBar)
 
     -- {
     --   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
