@@ -23,16 +23,11 @@ url    = "https://github.com/stefan-hoeck/idris2-jupyter-vega"
 commit = "latest:pack"
 ipkg   = "idris2-jupyter-vega.ipkg"
 
-# [custom.all.prob-fx]
-# type   = "github"
-# url    = "https://github.com/idris-bayes/prob-fx"
-# commit = "latest:main"
-# ipkg   = "prob-fx.ipkg"
-
-# [custom.all.prob-fx]
-# type   = "local"
-# path   = "/home/minh/Documents/idris/idris-bayes/prob-fx/"
-# ipkg   = "prob-fx.ipkg"
+[custom.all.prob-fx]
+type   = "github"
+url    = "https://github.com/idris-bayes/prob-fx"
+commit = "latest:main"
+ipkg   = "prob-fx.ipkg"
 
 [custom.all.bayes]
 type = "local"
