@@ -16,7 +16,8 @@ package bayes
 depends = monad-bayes, prob-fx, log-domain, distribution, free, contrib, python, jupyter, idris2-jupyter-vega, tailrec
 
 -- modules to install
-modules = LinRegrMB,
+modules = LinRegr,
+          LinRegrMB,
           LinRegrPFX,
           VegaPlot
 

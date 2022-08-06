@@ -1,3 +1,4 @@
+||| Linear regression using Monad Bayes
 module LinRegrMB
 
 import Control.Monad.Bayes.Interface

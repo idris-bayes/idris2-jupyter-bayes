@@ -1,12 +1,6 @@
+||| Linear regression using ProbFX
 module LinRegrPFX
 
--- import Control.Monad.Bayes.Interface
-import Control.Monad.Bayes.Sampler
-import Control.Monad.Bayes.Weighted
-import Control.Monad.Bayes.Population
-import Control.Monad.Bayes.Sequential
-import Control.Monad.Bayes.Traced.Static
-import Control.Monad.Bayes.Inference.RMSMC
 import Data.List
 import Data.List.Elem
 import ProbFX.Env
@@ -15,14 +9,15 @@ import ProbFX.Model
 import ProbFX.Inference.SIM
 import ProbFX.Inference.LW
 import ProbFX.Inference.MH
-import ProbFX.Inference.MBAYES
 import ProbFX.Effects.Lift
 
 ||| Linear regression environment
+public export
 LinRegrEnv : List (String, Type)
 LinRegrEnv = map ((, Double)) ["mu", "c", "std", "y"]
 
 ||| Linear regression model
+export
 linRegr : (prf : Observables env ["y", "mu", "c", "std"] Double) => List Double -> Model env es (List Double)
 linRegr xs = do
   mu  <- normal 0 3 "mu"
@@ -34,10 +29,12 @@ linRegr xs = do
   pure ys
 
 ||| An environment that sets the gradient mu = 3, intercept c = 0, and noise std = 1
+export
 envExampleSim : Env LinRegrEnv
 envExampleSim = ("mu" ::= [3]) <:> ("c" ::= [0]) <:> ("std" ::=  [1]) <:> ("y" ::=  []) <:> ENil
 
 ||| An environment for inference whose data represents the gradient m = 3 and intercept c = 0
+export
 envExampleInf : List Double -> Env LinRegrEnv
 envExampleInf xs =
   let ys = map (*3) xs
