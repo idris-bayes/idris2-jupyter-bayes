@@ -25,4 +25,4 @@ cd run
 
 4) In the browser, go to the jupyter notebook and select `idris2`.
 
-5) The dependencies of the notebook are given in `dummy.ipkg`, an `.ipkg` file which will be read by Idris when invoked by the jupyter kernel. This file must list all necessary dependencies, including the one to `linregr`, otherwise we won't be able to run `:module LinRegr`.
+5) The dependencies of the notebook are given in `dummy.ipkg`, an `.ipkg` file which will be read by Idris when invoked by the jupyter kernel. This file must list all necessary dependencies, including the one to `bayes`, otherwise we won't be able to run `:module LinRegr`.
