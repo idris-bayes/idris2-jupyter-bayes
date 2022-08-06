@@ -26,7 +26,7 @@ linRegrPrior : MonadSample m => m Params
 linRegrPrior = do
   mu <- normal 0 3
   c  <- normal 0 5
-  s  <- uniform 1 3
+  s  <- uniform 0.2 1.5
   pure (MkParams mu c s)
 
 ||| Simulate linear regression data
