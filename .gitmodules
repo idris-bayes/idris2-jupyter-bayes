@@ -1,0 +1,4 @@
+[submodule "idris2-jupyter"]
+        path = idris2-jupyter
+        url = git@github.com:min-nguyen/idris2-jupyter.git
+
